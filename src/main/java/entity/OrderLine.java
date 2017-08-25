@@ -1,8 +1,6 @@
 package entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 /**
  * Created by adam on 8/25/2017.
@@ -10,6 +8,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class OrderLine {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private int quantity;
